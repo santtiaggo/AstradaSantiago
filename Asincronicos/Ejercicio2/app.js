@@ -13,5 +13,5 @@ function mostrarChiste(ch)
 obtenerChiste().then((ch) => {
     mostrarChiste(ch);
 }).catch((err) => {
-    console.log("No se encontro el chiste" + err.messagge);
+    console.log('No se encontro el chiste');
 });

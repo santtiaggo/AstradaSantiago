@@ -1,7 +1,21 @@
+var funcion = (nota) => nota > 4;
 
-const quienesAprobaron = [[8,6,2,4],[7,9,4,5],[6,2,4,2],[9,6,7,10]];
 
-const result = quienesAprobaron.every(quienAprobo => quienAprobo.length >= 4);
+function quienesAprobaron(aprobado){
+     var alumnosAprobados;
 
-console.log(result);
+    
+    alumnosAprobados = aprobado.filter((nota) => 
+    nota.every(funcion));
+
+    return alumnosAprobados;
+}
+
+
+var aprobados = quienesAprobaron([[6,6,6],[5,3,6],[7,9,8]]);
+
+for (const iterator of aprobados) {
+    console.log(iterator);
+}
+
 
